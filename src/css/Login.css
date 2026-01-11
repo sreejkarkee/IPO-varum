@@ -1,6 +1,19 @@
 /* * {
   outline: 1px solid red;
-} */
+  } */
+  
+  .login-container {
+  
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 93vh;
+    box-sizing: border-box;
+    
+  }
+
 
 .login-logo {
   background: #ffffff;
@@ -30,15 +43,6 @@
   right: 0;
 }
 
-.login-container {
-  padding-top: 80px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 93vh;
-  box-sizing: border-box;
-}
 
 .login-title {
   text-shadow: #1f2937;
