@@ -1,6 +1,7 @@
 import "../css/Login.css";
 import { useState } from "react";
-import Logo from "../assets/stock.svg"
+import Logo from "../assets/stock.svg";
+import { Link } from "react-router-dom";
 
 function Login() {
   const [Email, setEmail] = useState("");
@@ -47,9 +48,9 @@ function Login() {
             <input type="checkbox" />
             Remember me
           </label>
-          <a href="#" className="forgot-password">
+          <Link to="/forget-password" className="forgot-password">
             Forgot Password?
-          </a>
+          </Link>
         </div>
 
         <button className="login-button">Login</button>
