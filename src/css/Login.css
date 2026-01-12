@@ -94,17 +94,20 @@
   background-color: #e0e7ff;
 }
 
+
+
 .login-card button:hover {
   background: #1e40af;
 }
 
 .forgot-password {
+  text-align: center;
   padding: 2px;
-  top: auto;
+ 
   font-size: 15px;
   color: #2563eb;
   text-decoration: none;
-  margin-left: auto;
+ 
   margin-top: 10px;
   display: block;
 }
@@ -113,11 +116,6 @@
   text-decoration: underline;
 }
 
-.remember-me {
-  font-size: 15px;
-  display: flex;
-  align-items: center;
-}
 .footer-content {
   text-align: center;
   margin-top: 20px;

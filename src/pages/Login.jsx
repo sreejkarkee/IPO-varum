@@ -35,25 +35,14 @@ function Login() {
           value={Password}
           onChange={(e) => setPassword(e.target.value)}
         />
+        <button className="login-button">Login</button>
 
-        <div
-          className="login-options"
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
-          <label className="remember-me">
-            <input type="checkbox" />
-            Remember me
-          </label>
+        <div className="login-options">
           <Link to="/forget-password" className="forgot-password">
             Forgot Password?
           </Link>
         </div>
 
-        <button className="login-button">Login</button>
       </div>
 
       <footer className="footer-content">
