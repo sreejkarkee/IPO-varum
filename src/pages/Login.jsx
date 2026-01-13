@@ -2,12 +2,23 @@ import "../css/Login.css";
 import { useState } from "react";
 import Logo from "../assets/stock.svg";
 import { Link } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
 
 function Login() {
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
+  const handleLogin = () => {
+    if (!Email || !Password) {
+      toast.error("Please fill in all fields");
+      return;
+    }
+    // Add login logic here
+    toast.success("Login successful");
+  }
 
   return (
+    <>
+    <ToastContainer />
     <div className="login-container">
       <div className="login-header">
         <div className="login-logo">
@@ -35,7 +46,7 @@ function Login() {
           value={Password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button className="login-button">Login</button>
+        <button className="login-button" onClick={handleLogin}>Login</button>
 
         <div className="login-options">
           <Link to="/forget-password" className="forgot-password">
@@ -51,6 +62,7 @@ function Login() {
         </p>
       </footer>
     </div>
+  </>
   );
 }
 
