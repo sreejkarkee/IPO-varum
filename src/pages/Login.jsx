@@ -18,7 +18,7 @@ function Login() {
 
   return (
     <>
-    <ToastContainer />
+    
     <div className="login-container">
       <div className="login-header">
         <div className="login-logo">
@@ -27,6 +27,9 @@ function Login() {
         </div>
         <button className="support-button">Talk to Support</button>
       </div>
+
+     <ToastContainer position="top-right" autoClose={3000} />
+
 
       <div className="login-title">Log in to Your Account</div>
 
