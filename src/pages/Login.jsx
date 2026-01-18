@@ -7,7 +7,8 @@ import { toast, ToastContainer } from "react-toastify";
 function Login() {
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
-  const handleLogin = () => {
+  const handleLogin = (e) => {
+    e.preventDefault();
     if (!Email || !Password) {
       toast.error("Please fill in all fields");
       return;
@@ -38,7 +39,7 @@ function Login() {
 
         <div className="login-title">Log in to Your Account</div>
 
-        <div className="login-card">
+        <form className="login-card" onSubmit={handleLogin}>
           <div className="login-label">Email Address</div>
           <input
             type="text"
@@ -63,7 +64,7 @@ function Login() {
               Forgot Password?
             </Link>
           </div>
-        </div>
+        </form>
 
         <footer className="footer-content">
           <p className="footer-copyright">
