@@ -126,3 +126,109 @@ body {
 .ipo-table th {
   background: #f3f4f6;
 }
+
+
+/* --- Existing Styles (keep your current code above) --- */
+
+/* Make dashboard responsive */
+@media screen and (max-width: 1024px) {
+  .dashboard {
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas:
+      "header header"
+      "sidebar main";
+  }
+
+  .dashboard-sidebar {
+    padding: 15px;
+  }
+
+  .dashboard-header {
+    padding: 0 20px;
+  }
+
+  .dashboard-main {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Collapse sidebar into top menu for small screens */
+  .dashboard {
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px auto 1fr;
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "main";
+  }
+
+  .dashboard-sidebar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-right: none;
+    border-bottom: 1px solid #d1d5db;
+    padding: 10px 0;
+  }
+
+  .dashboard-sidebar ul {
+    display: flex;
+    gap: 10px;
+  }
+
+  .dashboard-sidebar li {
+    padding: 8px 10px;
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+
+  .dashboard-main {
+    padding: 15px;
+  }
+
+  .dashboard-cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+  .card p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Mobile view adjustments */
+  .dashboard-header {
+    padding: 0 15px;
+  }
+
+  .dashboard-logo {
+    font-size: 18px;
+  }
+
+  .logout-button {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  .dashboard-cards {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .card h3 {
+    font-size: 12px;
+  }
+
+  .card p {
+    font-size: 18px;
+  }
+
+  .ipo-table th,
+  .ipo-table td {
+    padding: 8px;
+    font-size: 12px;
+  }
+}
