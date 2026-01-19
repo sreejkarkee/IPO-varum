@@ -13,7 +13,7 @@ function Login() {
       toast.error("Please fill in all fields");
       return;
     }
-    if (Email == "admin@ipo.com" && Password == "admin123") {
+    if (Email == "admin@ipo.com" && Password == "admin@123") {
       toast.success("Admin Login successful");
       localStorage.setItem("isLoggedIn", "true");
       window.location.href = "/dashboard";
